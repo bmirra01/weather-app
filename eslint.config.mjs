@@ -9,5 +9,21 @@ export default [
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
   pluginReact.configs.flat.recommended,
-  eslintConfigPrettier
+  eslintConfigPrettier,
+  {
+    rules: {
+      'no-unused-vars': 'warn',
+      'prefer-const': ['warn', { ignoreReadBeforeAssign: true }],
+      '@typescript-eslint/no-explicit-any': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'no-case-declarations': 'off'
+    }
+  },
+  {
+    settings: {
+      react: {
+        version: 'detect'
+      }
+    }
+  }
 ]
